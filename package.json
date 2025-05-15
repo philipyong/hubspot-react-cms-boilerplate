@@ -6,12 +6,14 @@
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.10",
-    "prettier": "^2.7.1"
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11"
   },
   "scripts": {
     "start": "cd src/theme && npm start",
     "prettier": "prettier . --check",
-    "deploy": "hs project upload"
+    "deploy": "hs project upload",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "engines": {
     "node": ">=20.0.0"

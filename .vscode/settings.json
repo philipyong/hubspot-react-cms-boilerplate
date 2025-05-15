@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "*.html": "html-hubl",
-        "*.css": "css-hubl"
+        "*.css": "tailwindcss"
+    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[html-hubl]": {
+        "editor.defaultFormatter": "HubSpot.hubl"
     }
 }

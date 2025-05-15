@@ -9,6 +9,7 @@ A starter template to help developers quickly build and deploy React components 
 - 📦 Pre-configured build and deployment scripts
 - 🔧 Development server with hot reloading
 - 📱 Responsive design support out of the box
+- 🔄 Server-side request example
 
 ## Prerequisites
 

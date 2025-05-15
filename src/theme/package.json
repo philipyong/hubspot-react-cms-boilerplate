@@ -3,16 +3,22 @@
   "version": "1.0.0",
   "description": "CMS React starter theme",
   "scripts": {
+    "build": "npx @tailwindcss/cli -i ./styles/tailwind.css -o ./styles/styles.css",
     "start": "hs-cms-dev-server .",
-    "deploy": "hs project upload"
+    "deploy": "npm run build && hs project upload"
   },
   "type": "module",
   "keywords": [],
   "dependencies": {
     "@hubspot/cms-components": "latest",
-    "react": "^18"
+    "@tailwindcss/postcss": "^4.1.6",
+    "autoprefixer": "^10.4.21",
+    "postcss-nested": "^7.0.2",
+    "react": "^18",
+    "tailwindcss": "^4.1.6"
   },
   "devDependencies": {
-    "@hubspot/cms-dev-server": "latest"
+    "@hubspot/cms-dev-server": "latest",
+    "@types/node": "^22.15.18"
   }
 }

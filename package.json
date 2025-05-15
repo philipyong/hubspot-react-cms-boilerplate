@@ -1,8 +1,9 @@
 {
-  "name": "getting-started-with-cms-react",
-  "description": "Getting started with CMS React",
+  "name": "hubspot-react-cms-boilerplate",
+  "description": "HubSpot React CMS Boilerplate",
   "devDependencies": {
-    "@hubspot/prettier-plugin-hubl": "latest",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.10",

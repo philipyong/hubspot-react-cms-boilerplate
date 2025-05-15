@@ -1,6 +1,6 @@
 import { ModuleFields, TextField } from '@hubspot/cms-components/fields';
 import '../../../styles/tailwind.css';
-// @ts-ignore
+// @ts-expect-error - Island component is not typed
 import ExampleComponent from '../../islands/ExampleComponent.tsx?island';
 import {
   Island,
@@ -27,6 +27,7 @@ export type Pokemon = {
 };
 
 // Helper function to settle promises
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const settlePromise = (promise: Promise<any>) =>
   promise
     .then((value) => ({ status: 'fulfilled' as const, value }))
@@ -37,6 +38,7 @@ export interface ExampleModuleServerSideProps {
   fetchedPokemonDataContainer?: {
     status: 'fulfilled' | 'rejected';
     value?: { json: Pokemon; duration: number; source: string };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     reason?: any;
   };
   error?: string;
@@ -69,6 +71,7 @@ async function fetchRandomPokemonData(): Promise<{
       duration: Date.now() - startTime,
       source: 'fetch',
     };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     logError(
       `[ExampleModule] Failed to fetch Pokémon data for ${pokemonId}: `,
